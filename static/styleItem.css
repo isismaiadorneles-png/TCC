@@ -1,0 +1,108 @@
+#divprincipal{
+  padding: 10px;
+  width: 100%;
+  height: 130px;
+  background-color: rgba(0, 92, 170, 1);
+}
+/*criação de item*/
+.letras{
+    font-family:Verdana ;
+    color:#eaedef ;
+}
+#input{
+    width: 40%;       /* Largura total da div pai */
+    height: 40px;      /* Aumenta a altura */
+    font-size: 20px;   /* Aumenta o tamanho da fonte interna */
+    padding: 10px;     /* Espaçamento interno para melhorar aparência*/
+}
+
+/*caixa de texto*/
+#caixa1{
+position:absolute;
+top: 310px;
+width: 200px;
+height: 40px;
+border-radius: 10px;
+}
+#caixa2{
+position: absolute;
+top: 437px;
+width: 250px;
+height: 40px;
+border-radius: 10px;
+}
+#caixa3{
+position: absolute;
+top: 560px;
+width: 280px;
+height: 40px;
+border-radius: 10px;
+}
+#caixa4{
+  position: absolute;
+  top: 310px;
+  width: 230px;
+  height: 40px;
+  border-radius: 10px;
+}
+#caixa5{
+  position: absolute;
+  top: 560px;
+  width: 200px;
+  height: 40px;
+  border-radius: 10px;
+}
+#caixa6{
+  position: absolute;
+  top: 437px;
+  width: 280px;
+  height: 40px;
+  border-radius: 10px;
+}
+
+/*cor do botao*/
+#botaoconcluir {
+    width: 450px;
+    height: 90px;
+    position: absolute;
+    left: 750px;
+    top: 750px;
+    font-size: larger;
+    background-color: #F28705;
+    color: aliceblue;
+    font-weight: bolder;
+    border-radius: 10px;
+    border: 2px solid;
+    font-family: Verdana;
+}
+
+#botaoconcluir:hover {
+    scale: 1.05;
+    position: absolute;
+    left: 750px;
+    top: 750px;
+    background-color: #C96128;
+    color: aliceblue;
+}
+
+#navbar{
+  background-color: #1D3273;
+  height: 70px;
+}
+
+#navbarenzo{
+  padding: 0px;
+  height: 70px;
+}
+
+#imagsenai{
+ position: absolute;
+ height: 55px;
+ width:  170px;
+ left: 1700px;
+ top: 13px;
+}
+
+#formulario{
+  max-height: 100px;
+}

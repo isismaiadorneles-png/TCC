@@ -1,0 +1,47 @@
+version: "3.8"
+
+services:
+  db_almox:
+    image: mysql:8.0
+    container_name: db_almox
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: almox
+
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/01-init.sql
+      - ./bkp_almox.sql:/docker-entrypoint-initdb.d/02-backup.sql
+      - mysql_data:/var/lib/mysql
+
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "mysqladmin",
+          "ping",
+          "-h",
+          "localhost",
+          "-u",
+          "root",
+          "-proot"
+        ]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  web:
+    build: .
+    container_name: app_almox
+    restart: always
+    ports:
+      - "5000:5000"
+    environment:
+      DB_HOST: db_almox
+      DB_PASSWORD: root
+    depends_on:
+      db_almox:
+        condition: service_healthy
+
+volumes:
+  mysql_data:

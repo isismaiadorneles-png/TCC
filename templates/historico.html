@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historico</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="/static/styleHistorico.css" rel="stylesheet">
+</head>
+<body style="background-color: #132B79;">
+     <!--aqui inicia a navbar-->
+<nav id="navbarenzo" class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid" id="navbar">
+    <a class="navbar-brand" href="#" style="color: #F86803; font-size: 25px; font-family: Verdana;">Almoxarifado</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <!--mudei a cor da navegação da pagina-->
+        <li class="nav-item">
+          <a class="nav-link" href="/estoque.html" style="color: aliceblue; font-size: 20px; font-family: Verdana;">Estoque</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/criacaoItem.html" style="color: aliceblue; font-size: 20px; font-family: Verdana;">Criar Itens</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/solicitar.html" style="color: aliceblue; font-size: 20px; font-family: Verdana;">Solicitações</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/historico.html" style="color: rgb(255, 136, 0); font-size: 20px; font-family: Verdana;">Histórico</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/index.html" style="color: aliceblue; font-size: 20px; font-family: Verdana;">Sair</a>
+        </li>
+        <!--fim da mudança-->
+      </ul>
+    </div>
+  </div>
+</nav>
+<!--fim da navbar-->  
+
+<div id="divprincipal"> 
+  <img id="imagsenai" src="/static/senai.branco (2).png"> 
+  <h1 id="H1EA">Histórico</h1> 
+</div>
+
+<table border="1" style="border-collapse: collapse;text-align: left; color: white; margin-top: 20px;">
+            <thead>
+                <tr style="background-color: rgba(255, 255, 255, 0.1);">
+                    <th style="padding: 10px;">Ordem</th>
+                    <th style="padding: 10px;">Nome do Item</th>
+                    <th style="padding: 10px;">Quantidade</th>
+                    <th style="padding: 10px;">Ação</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for retirada in retiradas %}
+                <tr>
+                    <td style="padding: 10px;">{{ retirada.id }}</td>
+                    <td style="padding: 10px;">{{ retirada.nome }}</td>
+                    <td style="padding: 10px;">{{ retirada.quantidade }}</td>
+                    <td style="padding: 10px;">{{ retirada.acao }}</td>
+                </tr>
+                {% else %}
+                <tr>
+                    <td colspan="4" style="padding: 10px; text-align: center;">Nenhuma retirada cadastrada.</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+</body>
+</html>

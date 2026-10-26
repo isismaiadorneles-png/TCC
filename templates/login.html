@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login do Admin</title>
+    
+    <script src="static/login.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <link href="static/stylelogin.css" rel="stylesheet"> 
+  </head>
+<body> 
+ <div id="quadradoroger"> </div><!--essa aqui é a div branca que esta na metade da tela-->
+  <div id="caixadeinformaçoes"><!--aqui guarda todo so sitens sobre a caixa de login -->
+   <div id="quadradoAzul" style="position: absolute; left: 620px; top: 100px;"> <!--aqui é a div do quadrado azul de login-->
+      <div id="mexerletras"><!--div pra mexer as letras-->
+      <h1 class="titulologin" style="position: relative; left: 227px;">Sistema</h1>
+      <h1 class="titulologin"  style="position: relative; left: 280px; ">de</h1> 
+      <h1 class="titulologin"  style="position: relative; left: 185px; ">Almoxarifado</h1>
+      <h3 class="titulologin"  style="position: relative; left: 250px; color: #AAD5F9;">(ADMIN)</h3>
+      </div><!--fim da div pra mexer as letras-->
+      </div><!--div do quadrado azul-->
+    <div id="caixadetalhe"><a href="/criacaoUser.html"><h5 id="novouser" style="font-family: verdana; "> Cadastrar Novo Usuário</h5></a></div>
+    <div id="quadradinlaranja2"></div><img src="static/cadeado.png" id="cade">
+    <br>
+    <div id="quadradinlaranja"></div><img src="static/login.webp" id="icon">
+    <br>
+     <img src="static/logo.senai.png" height="85" width="200" style="position: absolute; left: 840px; top: 10px"> <!--aqui é a logo -->
+    
+    <br>
+    <br>
+      <p style= "position: absolute; left: 840px; top: 398px ;text-align: center;"><input type="text" id="user" name = "nome" ></p><!--aqui é caixa de texto-->
+      <p style= "position: absolute; left: 840px; top: 485px ;text-align: center;"><input type="password" id="senha" name = "senha" ></p>
+
+      <button id="botaoentrar" onclick="verificar()" style="position: absolute; left: 880px; top: 600px; height: 70px; width: 150px;" class="btn btn-primary;">ENTRAR</button> 
+      <a href="/index.html">
+        <button id="botaoentrar"  style="position: absolute; left: 650px; top: 870px; height: 50px; width: 120px;" class="btn btn-primary;">Voltar</button> 
+      </a>
+    </div>
+   </div><!--fim da div quadrado azul-->
+</body> 
+</html>

@@ -1,0 +1,4 @@
+ACESSO RESTRITO = 1234
+(admin):user= SouADM, senha= 1000
+
+(User):user= SouUser, senha= 2000

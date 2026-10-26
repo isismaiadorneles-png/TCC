@@ -1,0 +1,206 @@
+/*width é largura e heigth é altura*/
+#divprincipal{
+  padding: 10px;
+  width: 100vw;
+  height: 130px;
+  background-color: rgba(0, 92, 170, 1);
+}
+#imagsenai{
+  position: absolute;
+  height: 55px;
+  width:  170px;
+  left: 1700px;
+  top: 13px;
+}
+#H1EA{
+  position: absolute;
+  left: 785px;
+  top: 105px;
+  color: #eaedef;
+  font-family: Verdana;
+}
+#divbranco{
+  background-color: rgba(233, 233, 233, 1);
+  height: 760px;
+  width: 1800px;
+  position: absolute;
+  left: 50px;
+}
+#divazul{
+  background-color: rgb(41, 85, 151);
+  height: 710px;
+  width: 1750px;
+  position: absolute;
+  left: 20px;
+  top: 40px;
+}
+
+
+.btn-setor {/*aqui é quando os botoes de setores nao estao selecionados entao ficam na cor branca*/
+  background-color: rgb(131, 151, 179);
+  color: black;
+  border-color: rgb(227, 231, 235);
+  padding: 10px 20px;
+  cursor: pointer;
+}
+.btn-setor.ativo { /*aqui é pra quando o botao dos setores forem selecionados e ficarem azul*/
+  background-color: rgb(41, 85, 151);
+  color: white;
+}
+
+
+#navbarNav{
+  background-color: #1D3273;
+}
+#navbar{
+  background-color: #1D3273;
+  height: 70px;
+}
+
+#navbarenzo{
+  padding: 0px;
+  height: 70px;
+}
+
+table {
+  overflow: hidden;          /* ajuda a cortar os cantos */
+  border-collapse: collapse;
+  color: #203B5E;
+  border-width: 2px;
+  border-color: black;
+  border-radius: 15px;
+  border-style: solid;
+  text-align: center;
+  position: absolute;
+  left: 200px;
+  top: 290px;
+  font-family: verdana;
+  box-shadow: 4px 4px 5px 0px #00000093;
+}
+
+th{
+  color: #21095C;
+  width: 180px;
+  border: 2px solid black;
+  background-color: #F78F0C;
+}
+td{
+  width: 180px;
+  border: 2px solid black;
+  background-color: #B5C5D5;
+}
+tr {
+  height: 50px;
+}
+#botaofiltro{
+  width: 178px;
+  height: 35px;
+  position: absolute;
+  z-index: 12;
+  top: 2px;
+  left: 1px;
+  background-color: #ff9411;
+  border-bottom-left-radius: 15px;
+  border-top-left-radius: 15px;
+  border: 2px solid #ff9736;
+  cursor: pointer;
+}
+#imgfiltro{
+  width: 25px;
+  height: 23px;
+  position: absolute;
+  left: 65px;
+  top: 3px;
+}
+#janelinha{
+  color: #152266;
+  font-family: Verdana;
+  position: absolute;
+  left: 45px;
+  top: 2px;
+  font-size: 23px;
+}
+.caixa {
+  width: 180px;
+  position: absolute;
+  left: 137px;
+  top: 342px;
+  z-index: 10;
+}
+.conteudo {
+  padding: 15px;
+  background-color: #f9f9f9;
+  transition: all 0.3s ease; /* Adiciona uma transição suave */
+  top: 4px;
+  height: 400px;
+  background: linear-gradient(to bottom, #ff9411, #f5b428);
+  border-bottom-left-radius: 15px;
+  border-top-left-radius: 15px;
+  border: 2px solid #B5C5D5;
+  box-shadow: -4px 7px 5px 0px #00000093;
+ /* Camada logo abaixo do botão */
+  position: relative;
+  z-index: 11;
+  margin-top: 5px;/* Empurra o conteúdo um pouco para baixo para não cobrir o texto do botão */
+
+  opacity: 1;
+  transform: scaleY(1); /* Tamanho vertical normal */
+  transform-origin: top; /* Faz abrir de cima para baixo */
+
+  transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.3s ease;/*esse é responsavel pelo efeito mola*/
+}
+#ID{
+  font-family: verdana;
+  position: absolute;
+  top: 39px;
+}
+.seta-icone{
+  position: relative;
+  left: 65px;
+}
+.escondido {
+  display: block !important; /* Garante que o display não quebre a transição */
+  opacity: 0;
+  transform: scaleY(0); /* Encolhe até sumir */
+  pointer-events: none; /* Impede o usuário de clicar nas coisas invisíveis */
+}
+/*Aqui vao styles de checkbox*/
+#Mecânica{
+  position: absolute;
+  top: 36px;
+  width: 20px;
+  height: 20px;
+  left: 19px;
+}
+.conteudo input[type="checkbox"] {
+  cursor: pointer;
+  accent-color: #f8cc52;
+}
+#MecânicaNome{
+  position: absolute;
+  top: 33px;
+  font-family: verdana;
+  font-size: 18px;
+  color: #a84604;
+  left: 43px;
+}
+/*---ELETRICA---*/
+#Elétrica{
+  position: absolute;
+  top: 74px;
+  width: 20px;
+  height: 20px;
+  left: 19px;
+}
+.conteudo input[type="checkbox"] {
+  cursor: pointer;
+  accent-color: #f8cc52;
+}
+#ElétricaNome{
+  position: absolute;
+  top: 72px;
+  font-family: verdana;
+  font-size: 18px;
+  color: #a84604;
+  left: 42px;
+}

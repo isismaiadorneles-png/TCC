@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrada de Login</title>
+    <script src="/static/index.js" defer></script>
+    <link href="/static/styleINDEX.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </head>
+<body style="background: linear-gradient(to bottom, #5E81EB, #2846A1); min-height: 100vh; width: 100vh;">
+<div id="titulo">
+  <h1 style="font-size: 400%;">Bem Vindo ao</h1>
+  <h1 style="position: relative; font-size: 400%;">Almoxarifado</h1>
+</div>
+<img id="senaibranco" src="/static/senai.branco (2).png">
+ <!--aqui sao div dos botoes-->
+<a class="link" onclick="senha()" style="color: black; cursor: pointer;"> <!--aqui é O PIRMEIRO botao apenas-->
+ <div id="blocoazul"><h1 id="adminH">Sou Admin</h1></div>
+ <div class="admin" id="bolinha">
+  <img id="adminlogo" src="/static/admin-icon.webp">
+ </div>  
+</a><!--fim do PRIMEIRO botao-->
+
+<a href="/loginusuario.html"><!--aqui é O SEGUNDObotao apenas-->  
+<div id="blocoazul2"><h1 id="adminH2">Sou Usuário</h1></div>
+<div class="usuario" id="bolinha2">
+  <img id="usuariologo" src="/static/logousuario.png">
+</div>
+</a><!--fim do SEGUNDO   botao-->
+
+</body>
+</html>

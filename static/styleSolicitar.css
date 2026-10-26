@@ -1,0 +1,154 @@
+#divprincipal{
+  padding: 10px;
+  width: 100vw;
+  height: 130px;
+  background-color: rgba(0, 92, 170, 1);
+}
+#imagsenai{
+ position: absolute;
+ height: 55px;
+ width:  170px;
+ left: 1700px;
+ top: 13px;
+}
+#btnVLT{
+  position: absolute;
+  margin-left: 1400px;
+  margin-top: 1px;
+  color:  black;
+  background-color: rgba(217, 217, 217, 1);
+}
+#H1S{
+  position: absolute;
+  left: 855px;
+  top: 83px;
+  color: #eaedef;
+  font-family: Verdana;
+}
+#H1SE{
+  position: absolute;
+  left: 790px;
+  top: 135px;
+  color: #eaedef;
+  font-family: Verdana;
+}
+#divazulzin{
+  background-color: rgba(0, 92, 170, 1);
+  height: 700px;
+  width: 1750px;
+  position: absolute;
+  left: 90px;
+  top: 220px;
+  border: 5px solid;
+  border-color: rgba(233, 233, 233, 1);
+  border-radius: 10px;
+}
+#divsaiEentra{
+    background-color: #2E529E;
+    height: 360px;
+    width: 1480px;
+    position: absolute;
+    left: 100px;
+    top: 37px;
+    border: 3px solid;
+    border-color: #5B0C6E;
+    border-radius: 10px;
+}
+#itentxt{
+    position: absolute;
+    left: 300px;
+    top: 80px;
+    color: azure;
+    font-family: Verdana;
+}
+#quanttxt{
+   position: absolute;
+   left: 300px;
+   top: 225px;
+   color: aliceblue;
+   font-family: Verdana;
+}
+#inputitem{
+    width: 750px;
+    height: 70px;
+    position: absolute;
+    top: 75px;
+    left: 440px;
+    font-size: 30px;
+    border-radius: 10px;
+    font-family: Verdana;
+    
+}
+#inputquantidade{
+    width: 640px;
+    height: 70px;
+    position: absolute;
+    left: 560px;
+    top: 218px;
+    font-size: 30px;
+    border-radius: 10px;
+    font-family: Verdana;
+}
+#entrada{
+    width: 450px;
+    height: 90px;
+    position: absolute;
+    left: 100px;
+    top: 450px;
+    background-color: #F28705;
+    color: aliceblue;
+    font-weight: bolder;
+    border-radius: 10px;
+    font-family: Verdana;
+}
+#entrada:hover{
+    scale: 1.05;
+    position: absolute;
+    left: 100px;
+    top: 450px;
+    background-color: #C96128;
+    color: aliceblue;
+}
+#saida{ /*como muda tamanho do texto dentro do botao e da caixa de texto*/
+    width: 450px;
+    height: 90px;
+    position: absolute;
+    left: 900px;
+    top: 450px;
+    background-color: #F28705;
+    color: aliceblue;
+    font-weight: bolder;
+    border-radius: 10px;
+    font-family: Verdana;
+}
+#saida:hover{ 
+    scale: 1.05;
+    width: 450px;
+    height: 90px;
+    position: absolute;
+    left: 900px;
+    top: 450px;
+    background-color: #C96128;
+    color: aliceblue;
+}
+.btn-setor {
+  background-color:rgb(169, 194, 247);
+  color: black;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+.btn-setor.ativo {
+  background-color: rgba(21, 39, 77, 1);
+  color: white;
+}
+#navbarNav{
+  background-color: #1D3273;
+}
+#navbar{
+  background-color: #1D3273;
+  height: 70px;
+}
+#navbarenzo{
+  padding: 0px;
+  height: 70px;
+}

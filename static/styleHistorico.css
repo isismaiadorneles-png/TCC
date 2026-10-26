@@ -1,0 +1,122 @@
+/*width é largura e heigth é altura*/
+#divprincipal{
+  padding: 10px;
+  width: 100vw;
+  height: 130px;
+  background-color: rgba(0, 92, 170, 1);
+}
+#imagsenai{
+  position: absolute;
+  height: 55px;
+  width:  170px;
+  left: 1700px;
+  top: 13px;
+}
+#divbranco{
+  background-color: rgba(233, 233, 233, 1);
+  height: 760px;
+  width: 1800px;
+  position: absolute;
+  left: 50px;
+}
+#divazul{
+  background-color: rgb(41, 85, 151);
+  height: 710px;
+  width: 1750px;
+  position: absolute;
+  left: 20px;
+  top: 40px;
+}
+.btn-setor {/*aqui é quando os botoes de setores nao estao selecionados entao ficam na cor branca*/
+  background-color: rgb(131, 151, 179);
+  color: black;
+  border-color: rgb(227, 231, 235);
+  padding: 10px 20px;
+  cursor: pointer;
+}
+.btn-setor.ativo { /*aqui é pra quando o botao dos setores forem selecionados e ficarem azul*/
+  background-color: rgb(41, 85, 151);
+  color: white;
+}
+table {
+  overflow: hidden;          /* ajuda a cortar os cantos */
+  border-collapse: collapse;
+  color: #203B5E;
+  border-width: 2px;
+  border-color: black;
+  border-radius: 15px;
+  border-style: solid;
+  text-align: center;
+  position: absolute;
+  left: 200px;
+  top: 270px;
+  font-family: verdana;
+  box-shadow: 4px 4px 5px 0px #00000093;
+}
+th{
+  color: #21095C;
+  width: 350px;
+  border: 2px solid black;
+  background-color: #F78F0C;
+  text-align: center;
+}
+td{
+  width: 180px;
+  border: 2px solid black;
+  background-color: #B5C5D5;
+}
+tr {
+  height: 50px;
+}
+#botaofiltro{
+  width: 178px;
+  height: 35px;
+  position: absolute;
+  z-index: 12;
+  top: 2px;
+  left: 1px;
+  background-color: #ff9411;
+  border-bottom-left-radius: 15px;
+  border-top-left-radius: 15px;
+  border: 2px solid #ff9736;
+  cursor: pointer;
+}
+#imgfiltro{
+  width: 25px;
+  height: 23px;
+  position: absolute;
+  left: 65px;
+  top: 3px;
+}
+/*logo abaixo sao configuraçoes de outro style CSS que um integrante antigo criou para mesma pagina de historico*/
+#navbarNav{
+  background-color: #1D3273;
+}
+#navbar{
+  background-color: #1D3273;
+  height: 70px;
+}
+#navbarenzo{
+  padding: 0px;
+  height: 70px;
+}
+#divprincipal{
+  padding: 10px;
+  width: 100vw;
+  height: 130px;
+  background-color: rgba(0, 92, 170, 1);
+}
+#imagsenai{
+  position: absolute;
+  height: 55px;
+  width:  170px;
+  left: 1700px;
+  top: 13px;
+}
+#H1EA{
+  position: absolute;
+  left: 840px;
+  top: 105px;
+  color: #eaedef;
+  font-family: Verdana;
+}

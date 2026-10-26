@@ -1,0 +1,68 @@
+.letras{
+    font-family:Verdana ;
+    color:#eaedef ;
+}
+.cordaletra{
+    font-family:Verdana ;
+    color:white ;  
+}
+/*caixa de texto*/
+#caixa1{
+position:absolute;
+top: 340px;
+width: 430px;
+height: 50px;
+border-radius: 10px;
+}
+#caixa2{
+position: absolute;
+top: 450px;
+width: 430px;
+height: 50px;
+border-radius: 10px;
+}
+#caixa3{
+position: absolute;
+top: 570px;
+width: 430px;
+height: 50px;
+border-radius: 10px;
+}
+#botaoconcluir{
+    background-color: #F27405;
+    color:black;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;   
+}
+/*muda a cor do botao*/
+#botaoconcluir:active{
+    background-color: #0282B5;
+}
+
+/*retangulo do senai*/
+#divprincipal{
+    padding: 10px;
+    width: 100vw;
+    height: 130px;
+    background-color: rgba(0, 92, 170, 1);
+}
+/*quadrado no meio da pagina*/
+#quadrado{
+    position:absolute;
+    top:170px;
+    left: 570px;
+    width: 700px;
+    height: 700px;
+    border-radius: 10px;
+    background-color: rgba(0, 92, 170, 1);
+}
+
+#imagesenai{
+    position: absolute;
+    height: 55px;
+    width:  170px;
+    left: 1700px;
+    top: 10px;
+}

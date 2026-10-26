@@ -1,0 +1,109 @@
+#titulo{
+    color: #FFFFFF;
+    position: relative;
+    left: 82%;
+    top: 7%;
+    font-family: Verdana;
+    
+}
+#senaibranco{
+    width: 27%;
+    height: 7%;
+    position: relative;
+    left: 90%;
+    top: 26%;
+}
+#blocoazul{
+    width: 450px;
+    height: 450px;
+    background-color: #1D3273;
+    position: absolute;
+    left: 420px;
+    top: 430px;
+    border-radius: 25px;
+}
+#bolinha{
+    width: 200px;
+    height: 200px;
+    background-color: #ffffff;
+    position: absolute;
+    left: 545px;
+    top: 600px;
+    border-radius: 100%;
+    border-color: rgb(0, 0, 0);
+    border: 10px solid;
+}
+#adminlogo{
+  width: 140px;
+  height: 150px;
+  position: absolute;
+  top: 15px;
+  left: 24px;
+}
+#button1{
+  position: absolute;
+  top: 15px;
+  left: 20px; 
+}
+#adminH{
+  position: absolute;
+  top: 40px;
+  left: 60px;
+  font-family: verdana;
+  font-size: 60px;
+  color: aliceblue;
+}
+
+#blocoazul2{
+    width: 450px;
+    height: 450px;
+    background-color: #1D3273;
+    position: absolute;
+    left: 1150px;
+    top: 430px;
+    border-radius: 25px;
+}
+#bolinha2{
+    width: 200px;
+    height: 200px;
+    background-color: #ffffff;
+    position: absolute;
+    left: 1275px;
+    top: 600px;
+    border-radius: 100%;
+}
+#usuariologo{
+  width: 205px;
+  height: 205px;
+  position: absolute;
+  top: -2px;
+  left: -2px;
+}
+#button2{
+  position: absolute;
+  top: 15px;
+  left: 20px; 
+}
+#adminH2{
+  position: absolute;
+  top: 40px;
+  left: 45px;
+  font-family: verdana;
+  font-size: 60px;
+  color: aliceblue;
+}
+.admin{  
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; 
+}
+.admin:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.6); 
+}
+
+.usuario{  
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; 
+}
+.usuario:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.6); 
+}

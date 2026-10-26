@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estoque</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="/static/styleEstoque.css" rel="stylesheet">
+  </head>
+
+<body style="background-color: #132B79;">
+  <!--aqui inicia a navbar-->
+  <nav id="navbarenzo" class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid" id="navbar">
+    <a class="navbar-brand" href="#" style="color: #F86803; font-size: 25px; font-family: Verdana;">Almoxarifado</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <!--mudei a cor da navegação da pagina-->
+        <li class="nav-item">
+          <a class="nav-link" href="/estoque.html" style="color: rgb(255, 136, 0); font-size: 20px; font-family: Verdana;">Estoque</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/criacaoItem.html" style="color: aliceblue; font-size: 20px; font-family: Verdana;">Criar Itens</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/solicitar.html" style="color: aliceblue; font-size: 20px; font-family: Verdana;">Solicitações</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/historico.html" style="color: aliceblue; font-size: 20px; font-family: Verdana;">Histórico</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/index.html" style="color: aliceblue; font-size: 20px; font-family: Verdana;">Sair</a>
+        </li>
+        <!--fim da mudança-->
+      </ul>
+    </div>
+  </div>
+</nav>
+<!--fim da navbar-->  
+<div id="divprincipal"> <!--aqui é o cabeçalho1-->
+  <img id="imagsenai" src="/static/senai.branco (2).png"> 
+  <h1 id="H1EA">Estoque Atual</h1> 
+</div><!--fim do cabeçalho1-->
+<br>
+
+<!--aqui pra baixo começa a tabela do estoque-->
+<table>
+          <tr>
+              <th>id</th>
+              <th>nome</th>
+              <th>quantidade</th>
+              <th>estoque minimo</th>
+              <th>descrição</th>
+              <th>preço</th>
+              <th>categoria</th>
+              <th>imagem</th>
+          </tr>
+          {% for item in resultado %}
+          <tr>
+              <td>{{item[0]}}</td>
+              <td>{{item[1]}}</td>
+              <td>{{item[2]}}</td>
+              <td>{{item[3]}}</td>
+              <td>{{item[4]}}</td>
+              <td>{{item[5]}}</td>
+              <td>{{item[6]}}</td>
+              <td>
+              <img src="{{ url_for('static', filename='imagens_produtos/' + item[7]) }}" 
+                      alt="Imagem de {{ item[1] }}" 
+                      style="width: 50px; height: 50px; object-fit: cover; border-radius: 4px; cursor: pointer;"
+                      onclick="ampliarImagem(this.src)">
+              </td>
+          </tr>
+          {% endfor %}
+</table>
+</body>
+<div id="meuModal" style="display: none; position: fixed; z-index: 9999; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.8); justify-content: center; align-items: center;">
+    
+    <span onclick="fecharImagem()" style="position: absolute; top: 20px; right: 35px; color: white; font-size: 40px; font-weight: bold; cursor: pointer; user-select: none;">&times;</span>
+    
+    <img id="imagemGrande" style="max-width: 80%; max-height: 80%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+</div>
+
+
+<script src="/static/estoque.js" defer></script>
+</html>

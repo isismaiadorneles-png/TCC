@@ -1,0 +1,30 @@
+#divprincipal{
+    padding: 30px;
+    width: 100vw;
+    height: 130px;
+    background-color: rgba(0, 92, 170, 1);
+}
+#imagesenai{
+    position: absolute;
+    height: 55px;
+    width:  170px;
+    left: 1700px;
+    top: 13px;
+}
+#nome {
+    font-family: verdana;
+    font-size: 50px;
+    position: absolute;
+    left: 600px;
+    top: 60px;
+    color: white;
+}
+#botaovoltar {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    height: 40px;
+    width: 100px;
+    background-color: #F27405;
+    border-radius: 8px;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/static/solicitar.js" defer></script>
+    <link href="/static/styleSolicitar.css" rel="stylesheet">
+    <title>Entrada e Saída</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body style="background-color: rgba(19, 43, 121, 1);">
+  
+  <!--aqui inicia a navbar-->
+  <nav id="navbarenzo" class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid" id="navbar">
+    <a class="navbar-brand" href="#" style="color: #F86803; font-size: 25px; font-family: Verdana;">Almoxarifado</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <!--mudei a cor da navegação da pagina-->
+        <li class="nav-item">
+          <a class="nav-link" href="/estoque.html" style="color: aliceblue; font-size: 20px; font-family: Verdana;">Estoque</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/criacaoItem.html" style="color: aliceblue; font-size: 20px; font-family: Verdana;">Criar Itens</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/solicitar.html" style="color: rgb(255, 136, 0); font-size: 20px; font-family: Verdana;">Solicitações</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/historico.html" style="color: aliceblue; font-size: 20px; font-family: Verdana;">Histórico</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/index.html" style="color: aliceblue; font-size: 20px; font-family: Verdana;">Sair</a>
+        </li>
+        <!--fim da mudança-->
+      </ul>
+    </div>
+  </div>
+</nav>
+<!--fim da navbar-->
+   <div id="divprincipal"> <!--aqui é o cabeçalho-->
+     <img id="imagsenai" src="../static/senai.branco (2).png"> 
+     <h1 id="H1S">Solicitar</h1> 
+     <h1 id="H1SE">Saída e Entrada</h1>
+   </div><!--fim do cabeçalho-->
+   <br>
+   <div id="divazulzin"><!--bloco azul borda branca-->
+     <div id="divsaiEentra"><!--bloco branco Saida e Entrada-->
+        <h1 id="itentxt">Itens:</h1>
+        <h1 id="quanttxt">Quantidade:</h1>
+
+      <form action="/solicitar.html" method="POST">
+        <input placeholder="Digite o item desejado" type="text" id="inputitem" name="id" type="number" required>
+        <input placeholder="Digite a quantidade" type="text" id="inputquantidade" name="quantidade" type="number" required>
+
+        <button onclick="alerta()" id="entrada" class="btn-setor" type="submit" name="acao" value="colocar">ENTRADA</button>
+        <button onclick="alerta()" id="saida" class="btn-setor" type="submit" name="acao" value="retirar">SAÍDA</button>
+      </form>
+
+     </div>
+   </div>
+</body>
+</html>

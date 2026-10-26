@@ -1,0 +1,157 @@
+/*login style*/
+body{
+    background-image: url('/static/ROGER\ E\ VAMPETA.png');
+}
+#user{ /*place holder*/
+    width: 250px;
+    height: 45px;
+    padding: 10px;
+    font-size: 16px;
+    font-family: Verdana;
+    border-radius: 10px;
+}
+#senha{/*place holder*/
+    width: 250px;
+    height: 45px;
+    padding: 10px;
+    font-size: 16px;
+    font-family: Verdana;
+    border-radius: 10px;
+}
+
+#cade{/*foto imagem*/
+    position: absolute;
+    height: 41px;
+    left: 790px;
+    top: 487px;
+}
+
+#icon{/*foto imagem*/
+    position: absolute;
+    height: 40px;
+    left: 790px;
+    top: 400px;
+
+}
+
+#soli{
+     position: absolute;
+    height: 300px;
+    left: 250px;
+    top: 503px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+#soli:hover{
+    transform: scale(1.15);
+
+}
+
+#toque{
+     position: absolute;
+    height: 300px;
+    left: 790px;
+    top: 290px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#toque:hover{
+    transform: scale(1.15);
+}
+    
+
+#item{
+     position: absolute;
+    height: 300px;
+    left: 1353px;
+    top: 515px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#item:hover{
+    transform: scale(1.15);
+}
+
+#quadradoroger{
+background-color: aliceblue;
+  height: 953px; /*altura*/
+  width: 600px;
+  position: absolute;
+  left: 1320px;
+  top: 0px;
+}
+#caixadeinformaçoes{
+    position: absolute;
+    left: 700px;
+}
+#quadradoAzul{ /*aqui esta a div azul da caixa de login*/
+    background-color: #1D3273;
+    height: 853px;
+    width: 600px; 
+
+}
+#botaoentrar{/*aqui é configuraçoes do botao laranja de entrar*/
+    background-color: #F28705;
+    color: #1D3273;
+    font-family: Verdana;
+    font-size: x-large;
+}
+
+#botaoentrar:hover{
+    scale: 1.05;
+    position: absolute;
+    left: 100px;
+    top: 450px;
+    background-color: #C96128;
+    color: #1D3273;
+}
+#quadradolaranja{
+    background-color: #F28705;
+    position: absolute;
+    height: 40px;
+}
+#mexerletras{
+    position: absolute;
+    top: 10px;
+}
+.titulologin{
+    color: white;
+    font-family: Verdana;
+}
+#quadradinlaranja{
+    height: 60px;
+    width: 60px;
+    background-color: #F28705;
+    position: absolute;
+    left: 780px;
+    top: 390px;
+    border-radius: 50%;
+}
+#quadradinlaranja2{
+    height: 60px;
+    width: 60px;
+    background-color: #F28705;
+    position: absolute;
+    left: 780px;
+    top: 479px;
+    border-radius: 50%;
+}
+#caixadetalhe{
+    width: 400px;
+    height: 390px;
+    position: absolute;
+    top: 350px;
+    left: 750px;
+    background-color: #2E529E;
+    border-radius: 10px;
+}
+#novouser {
+    position: absolute;
+    font-size: 16px;
+    top: 360px;
+    left: 109px;
+    color: #F28705;
+    text-decoration: underline;
+}

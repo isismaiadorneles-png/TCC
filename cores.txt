@@ -1,0 +1,11 @@
+AZUL ESCURO= 0E3096
+CINZA CLARO = #eaedef
+cinza escuro = #b5c5d5
+login fundo = ECECEE
+AZUL CLARO = #032CA6
+laranja acizentado = #F27405
+laranja = #F86803
+laranja escuro = #AF3A00
+AZUL SUPER CLARO = #0282B5
+AZUL MAIS CLARINHO = AAD5F9
+azul escuro do portal senai = 1D3273
