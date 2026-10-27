@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Almoxarifado</title>
+  <link rel="stylesheet" href="assistente.css">
+</head>
+<body>
+  <script src="{{ url_for('static', filename='assistente.js') }}"></script>
+</body>
+  <h1>Almoxarifado</h1>
+  <p>Clique na bolinha para falar com a assistente.</p>
+
+  <!-- Bolinha -->
+  <button id="bolinha">?</button>
+
+  <!-- Chat -->
+  <div id="chat">
+    <div class="topo">
+      <span>Assistente do Almoxarifado</span>
+      <button id="fechar"> </button>
+    </div>
+
+    <div id="mensagens"></div>
+
+    <div class="rodape">
+      <input id="texto" type="text" placeholder="Digite aqui...">
+      <button id="enviar">Enviar</button>
+    </div>
+  </div>
+
+  <script src="assistente.js"></script>
+</body>
+</html>
+
+
+

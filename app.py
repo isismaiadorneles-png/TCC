@@ -5,6 +5,8 @@ import json
 
 app = Flask(__name__)
 
+app.config['SECRET_KEY'] = os.getenv('SECRET_KEY', 'Tccnota10')
+
 def get_db_connection():#aqui esta a função usada nas conexoes com o banco de dados
     """Função auxiliar para conectar ao banco de dados MySQL."""
     return mysql.connector.connect(
@@ -54,7 +56,7 @@ def login_usuario():
 @app.route('/estoque', methods=['GET', 'POST'])#aqui tem que revisar as anotações e expçlicações do que é cada coisa
 @app.route('/estoque.html', methods=['GET', 'POST'])
 def estoque():
-    if 'usuario_logado' not in session:
+    if 'usuario_logado' not in session:#se usuario logado nao for reconhecido entao sera redirecionado/mantido na pagina de login usuario
         return redirect('/loginusuario.html')
     conexao = get_db_connection()
 
@@ -83,7 +85,7 @@ def historico():
     
     return render_template("historico.html", retiradas=todas_retiradas)
 
-app = Flask(__name__)
+
 app.config['JSON_SORT_KERYS'] = False
 
 @app.route('/criacaoItem', methods=['GET', 'POST'])
@@ -158,7 +160,7 @@ def solicitar():
         
     return render_template("solicitar.html")
 
-@app.route('/tabela')#aqui nao precisa de methods
+@app.route('/tabela')
 @app.route('/tabela.html')#aqui precisa ser revisado as anotações e oq é cada coisa
 def tabela():
     conexao = get_db_connection()
@@ -198,10 +200,6 @@ def criacao():
         conexao.close()
    
     return render_template("criacao.html")
-
-# --- Assistente virtual (adicionado) ---
-from assistente import init_assistente
-init_assistente(app)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)

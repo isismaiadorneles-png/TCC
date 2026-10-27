@@ -25,7 +25,7 @@ CREATE TABLE funcionario(
 INSERT INTO funcionario (nome,funcao,senha)
 VALUES ('vampeta','gogoboy','123');
 
-SELECT * FROM funcionario
+SELECT * FROM funcionario;
 
 CREATE TABLE historico (
     id INT AUTO_INCREMENT PRIMARY KEY,
