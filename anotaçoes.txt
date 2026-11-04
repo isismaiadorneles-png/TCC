@@ -6,3 +6,20 @@
 **HISTORICO AINDA NAO FOI ALTERADo!!!
 
 chave: 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
+
+-precisa ser refeito o banco de dados, revisar as informações da tabela e alterar no flask para ficar coerente, alem de ter que mudar essas informções de login no html de cada
+pagina;
+
+**(nome, senha, tipo)**
+
+marcações feitas no flask nas linhas:
+->27
+->64
+->69
+->94
+->104
+->107
+->169
+->182
+->191
+->194

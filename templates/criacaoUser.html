@@ -20,26 +20,27 @@
       </div><!--fim do cabeçalho-->
     
     <div>
-
-
 <div>
     <h1 class="letras" style="position: absolute; left:710px; top: 280px;">Nome:</h1> 
     <h1 class="letras" style="position: absolute; left:710px; top: 390px;">Função:</h1>
     <h1 class="letras" style="position: absolute; left:710px; top: 510px;">Senha:</h1>
 <form action="criacaoUser.html" method="POST" enctype="multipart/form-data">
-    <div style="margin-left: 710px;">
-        <label for="nome"></label>
-        <input id=caixa1 type="text" name="nome" id="nome"placeholder="Digite o nome do usuario" required> <!--caixa de texto-->
-    </div>
-    <div style="margin-left: 710px;">
-        <label for="função"></label>
-        <input id="caixa2" type="text" name="funcao" id="função"placeholder="Digite a função" required> <!--caixa de texto-->
-    </div>
-    <div style="margin-left: 710px;">
-        <label for="senha"></label>
-        <input id="caixa3" type="text" name="senha" id="senha"placeholder="Digite a senha" required> <!--caixa de texto-->
-    </div>
-    <button id="botaoconcluir" style="position: absolute;top: 680px; left: 710px; width: 430px; height: 40px;"  type="submit" >cocluir</button>
+<div style="margin-left: 710px;"><!--aqui campo do nome-->
+    <label for="nome"></label>
+    <input id="caixa1" type="text" name="nome" placeholder="Digite o nome do usuario" required>
+</div>
+<div style="margin-left: 710px;"><!--aqui campo do tipo de useer(adm ou user)-->
+    <label for="tipo"></label>
+    <select id="caixa2" name="tipo" required>
+        <option value="usuario">Usuário</option>
+        <option value="admin">Administrador</option>
+    </select>
+</div>
+<div style="margin-left: 710px;"><!--aqui campo da senha-->
+    <label for="senha"></label>
+    <input id="caixa3" type="password" name="senha" placeholder="Digite a senha" required>
+</div>
+    <button id="botaoconcluir" style="position: absolute;top: 680px; left: 710px; width: 430px; height: 40px;"  type="submit" >concluir</button>
 </form>    
 </body>
 </html>
