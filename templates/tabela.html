@@ -8,28 +8,26 @@
     <link href="/static/styleTabela.css" rel="stylesheet">
 </head>
 <body style="background-color: #132B79;">
-    <div id="divprincipal"> <!--aqui é o cabeçalho1-->
+    <div id="divprincipal">
         <img id="imagesenai" src="../static/senai.branco (2).png"> 
         <h1 id="nome">Tabela de Funcionarios</h1> 
-    </div><!--fim do cabeçalho1-->
-    <table>
-        <tr>
-            <th>id</th>
-            <th>nome</th>
-            <th>tipo</th>
+    </div>
+    <table border="1" style="border-collapse: collapse;text-align: left; color: white; margin-top: 20px;">
+        <tr style="background-color: rgba(255, 255, 255, 0.1);">
+            <th style="padding: 10px;">id</th>
+            <th style="padding: 10px;">nome</th>
+            <th style="padding: 10px;">tipo</th>
         </tr>
         {% for item in resultado %}
         <tr>
-            <td>{{item[0]}}</td>
-            <td>{{item[1]}}</td>
-            <td>{{item[2]}}</td>
+            <td style="padding: 10px;">{{item[0]}}</td>
+            <td style="padding: 10px;">{{item[1]}}</td>
+            <td style="padding: 10px;">{{item[2]}}</td>
 
         </tr>
         {% endfor %}
 </table>
 <br>
-<a href="/criacaoUser.html"><a href="/criacao.html">
-   <button id="botaovoltar" type="submit" >Voltar</button>
-<a href="/criacao.html"></a>
+<a href="/criacaoUser.html"><button id="botaovoltar" type="submit" >Voltar</button></a>
 </body>
 </html>

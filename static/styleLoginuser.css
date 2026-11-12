@@ -1,8 +1,8 @@
-/*login style*/
+
 body{
     background-image: url('/static/ROGER\ E\ VAMPETA.png');
 }
-#user{ /*place holder*/
+#user{ 
     width: 250px;
     height: 45px;
     padding: 10px;
@@ -10,7 +10,7 @@ body{
     font-family: Verdana;
     border-radius: 10px;
 }
-#senha{/*place holder*/
+#senha{
     width: 250px;
     height: 45px;
     padding: 10px;
@@ -19,14 +19,14 @@ body{
     border-radius: 10px;
 }
 
-#cade{/*foto imagem*/
+#cade{
     position: absolute;
     height: 41px;
     left: 790px;
     top: 487px;
 }
 
-#icon{/*foto imagem*/
+#icon{
     position: absolute;
     height: 40px;
     left: 790px;
@@ -76,7 +76,7 @@ body{
 
 #quadradoroger{
 background-color: aliceblue;
-  height: 953px; /*altura*/
+  height: 953px; 
   width: 600px;
   position: absolute;
   left: 1320px;
@@ -86,13 +86,13 @@ background-color: aliceblue;
     position: absolute;
     left: 700px;
 }
-#quadradoAzul{ /*aqui esta a div azul da caixa de login*/
+#quadradoAzul{ 
     background-color: #1D3273;
     height: 853px;
     width: 600px; 
 
 }
-#botaoentrar{/*aqui é configuraçoes do botao laranja de entrar*/
+#botaoentrar{
     background-color: #F28705;
     color: #1D3273;
     font-family: Verdana;
@@ -154,4 +154,99 @@ background-color: aliceblue;
     left: 109px;
     color: #F28705;
     text-decoration: underline;
+}
+
+
+@media screen and (max-width: 768px) {
+  body {
+    margin: 0;
+    padding: 10px;
+    background-size: cover;
+    background-position: center;
+    overflow-x: hidden;
+  }
+
+  
+  #soli, #toque, #item, #icon, #cade, #quadradinlaranja, #quadradinlaranja2 {
+    display: none !important;
+  }
+
+  #quadradoroger {
+    position: static !important;
+    width: 100% !important;
+    height: auto !important;
+    left: auto !important;
+    top: auto !important;
+    background-color: transparent !important;
+  }
+
+  #caixadeinformaçoes {
+    position: static !important;
+    left: auto !important;
+    margin: 20px auto !important;
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  
+  #caixadetalhe {
+    position: static !important;
+    left: auto !important;
+    top: auto !important;
+    width: 92% !important;
+    max-width: 360px !important;
+    height: auto !important;
+    min-height: 320px !important;
+    margin: 30px auto !important;
+    padding: 30px 20px !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4) !important;
+    border-radius: 16px !important;
+  }
+
+  #quadradoAzul {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  
+  #user, #senha {
+    width: 100% !important;
+    max-width: 280px !important;
+    height: 50px !important;
+    margin: 10px auto !important;
+    box-sizing: border-box !important;
+    display: block !important;
+    font-size: 16px !important;
+  }
+
+  
+  #botaoentrar, #botaoentrar:hover {
+    position: static !important;
+    left: auto !important;
+    top: auto !important;
+    width: 100% !important;
+    max-width: 280px !important;
+    height: 52px !important;
+    margin: 20px auto 10px auto !important;
+    display: block !important;
+    border-radius: 10px !important;
+    font-size: 18px !important;
+    scale: 1 !important;
+  }
+
+  
+  #novouser {
+    position: static !important;
+    left: auto !important;
+    top: auto !important;
+    text-align: center !important;
+    display: block !important;
+    margin-top: 15px !important;
+  }
 }

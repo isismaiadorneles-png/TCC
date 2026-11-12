@@ -6,7 +6,10 @@
     font-family:Verdana ;
     color:white ;  
 }
-/*caixa de texto*/
+#VerUser{
+    position: absolute;
+    color: aquamarine;
+}
 #caixa1{
 position:absolute;
 top: 340px;
@@ -34,21 +37,22 @@ border-radius: 10px;
     border-radius: 5px;
     border: none;
     cursor: pointer;
-    transition: background-color 0.2s ease;   
+    transition: background-color 0.2s ease; 
+    font-family: verdana;  
+    color: #1D3273;
 }
-/*muda a cor do botao*/
+
 #botaoconcluir:active{
     background-color: #0282B5;
 }
 
-/*retangulo do senai*/
 #divprincipal{
     padding: 10px;
     width: 100vw;
     height: 130px;
     background-color: rgba(0, 92, 170, 1);
 }
-/*quadrado no meio da pagina*/
+
 #quadrado{
     position:absolute;
     top:170px;
@@ -65,4 +69,49 @@ border-radius: 10px;
     width:  170px;
     left: 1700px;
     top: 10px;
+}
+
+
+@media screen and (max-width: 768px) {
+    #divprincipal {
+        width: 100%;
+        height: 70px;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    #imagesenai {
+        left: auto;
+        right: 15px;
+        top: 10px;
+        height: 45px;
+        width: auto;
+    }
+
+    #quadrado {
+        position: static;
+        margin: 20px auto;
+        width: 90%;
+        max-width: 400px;
+        height: auto;
+        padding: 25px 20px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    #caixa1, #caixa2, #caixa3 {
+        position: static;
+        width: 100%;
+        margin: 0 0 15px 0;
+        box-sizing: border-box;
+    }
+
+    #botaoconcluir {
+        position: static;
+        width: 100%;
+        height: 50px;
+        margin-top: 10px;
+    }
 }

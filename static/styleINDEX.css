@@ -107,3 +107,127 @@
   transform: scale(1.1);
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.6); 
 }
+
+@media screen and (max-width: 768px) {
+  body {
+    margin: 0;
+    padding: 10px;
+    overflow-x: hidden;
+    background-color: #0d1b3e;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+ 
+  #titulo {
+    position: static;
+    left: auto;
+    top: auto;
+    text-align: center;
+    font-size: 22px;
+    margin: 15px auto 5px auto;
+    width: 100%;
+  }
+
+  #senaibranco {
+    position: static;
+    left: auto;
+    top: auto;
+    width: 160px;
+    height: auto;
+    display: block;
+    margin: 5px auto 25px auto;
+  }
+
+ 
+  #blocoazul {
+    position: static;
+    left: auto;
+    top: auto;
+    width: 88%;
+    max-width: 320px;
+    height: 250px;
+    margin: 15px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  }
+
+  #adminH {
+    position: static;
+    font-size: 30px;
+    text-align: center;
+    margin: 0 0 10px 0;
+  }
+
+  #bolinha {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: 120px;
+    height: 120px;
+    border-width: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #adminlogo {
+    position: static;
+    width: 80px;
+    height: 85px;
+    margin: auto;
+  }
+
+  #button1 {
+    position: static;
+  }
+
+  
+  #blocoazul2 {
+    position: static;
+    left: auto;
+    top: auto;
+    width: 88%;
+    max-width: 320px;
+    height: 250px;
+    margin: 15px auto 30px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  }
+
+  #adminH2 {
+    position: static;
+    font-size: 30px;
+    text-align: center;
+    margin: 0 0 10px 0;
+  }
+
+  #bolinha2 {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #usuariologo {
+    position: static;
+    width: 110px;
+    height: 110px;
+    margin: auto;
+  }
+
+  #button2 {
+    position: static;
+  }
+}

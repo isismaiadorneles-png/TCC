@@ -11,7 +11,6 @@
 </head>
 <body style="background-color: rgba(19, 43, 121, 1);">
   
-  <!--aqui inicia a navbar-->
   <nav id="navbarenzo" class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid" id="navbar">
     <a class="navbar-brand" href="#" style="color: #F86803; font-size: 25px; font-family: Verdana;">Almoxarifado</a>
@@ -20,7 +19,7 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
-        <!--mudei a cor da navegação da pagina-->
+        
         <li class="nav-item">
           <a class="nav-link" href="/estoque.html" style="color: aliceblue; font-size: 20px; font-family: Verdana;">Estoque</a>
         </li>
@@ -36,31 +35,26 @@
         <li class="nav-item">
           <a class="nav-link" href="/index.html" style="color: aliceblue; font-size: 20px; font-family: Verdana;">Sair</a>
         </li>
-        <!--fim da mudança-->
       </ul>
     </div>
   </div>
 </nav>
-<!--fim da navbar-->
-   <div id="divprincipal"> <!--aqui é o cabeçalho-->
+   <div id="divprincipal"> 
      <img id="imagsenai" src="../static/senai.branco (2).png"> 
      <h1 id="H1S">Solicitar</h1> 
      <h1 id="H1SE">Saída e Entrada</h1>
-   </div><!--fim do cabeçalho-->
+   </div>
    <br>
-   <div id="divazulzin"><!--bloco azul borda branca-->
-     <div id="divsaiEentra"><!--bloco branco Saida e Entrada-->
+   <div id="divazulzin">
+     <div id="divsaiEentra">
         <h1 id="itentxt">Itens:</h1>
         <h1 id="quanttxt">Quantidade:</h1>
-
-      <form action="/solicitar.html" method="POST">
-        <input placeholder="Digite o item desejado" type="text" id="inputitem" name="id" type="number" required>
-        <input placeholder="Digite a quantidade" type="text" id="inputquantidade" name="quantidade" type="number" required>
-
-        <button onclick="alerta()" id="entrada" class="btn-setor" type="submit" name="acao" value="colocar">ENTRADA</button>
-        <button onclick="alerta()" id="saida" class="btn-setor" type="submit" name="acao" value="retirar">SAÍDA</button>
-      </form>
-
+ <form action="/solicitar" method="POST">
+        <input placeholder="Digite o item desejado" type="text" id="inputitem" name="itens" required>
+        <input placeholder="Digite a quantidade" type="number" id="inputquantidade" name="quantidade" required>
+        <button id="entrada" class="btn-setor" type="submit" name="acao" value="colocar">ENTRADA</button>
+        <button id="saida" class="btn-setor" type="submit" name="acao" value="retirar">SAÍDA</button>
+  </form>
      </div>
    </div>
 </body>

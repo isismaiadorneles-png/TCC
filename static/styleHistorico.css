@@ -1,4 +1,4 @@
-/*width é largura e heigth é altura*/
+
 #divprincipal{
   padding: 10px;
   width: 100vw;
@@ -27,19 +27,19 @@
   left: 20px;
   top: 40px;
 }
-.btn-setor {/*aqui é quando os botoes de setores nao estao selecionados entao ficam na cor branca*/
+.btn-setor {
   background-color: rgb(131, 151, 179);
   color: black;
   border-color: rgb(227, 231, 235);
   padding: 10px 20px;
   cursor: pointer;
 }
-.btn-setor.ativo { /*aqui é pra quando o botao dos setores forem selecionados e ficarem azul*/
+.btn-setor.ativo { 
   background-color: rgb(41, 85, 151);
   color: white;
 }
 table {
-  overflow: hidden;          /* ajuda a cortar os cantos */
+  overflow: hidden;          
   border-collapse: collapse;
   color: #203B5E;
   border-width: 2px;
@@ -63,32 +63,12 @@ th{
 td{
   width: 180px;
   border: 2px solid black;
-  background-color: #B5C5D5;
+  background-color: #838383;
 }
 tr {
   height: 50px;
 }
-#botaofiltro{
-  width: 178px;
-  height: 35px;
-  position: absolute;
-  z-index: 12;
-  top: 2px;
-  left: 1px;
-  background-color: #ff9411;
-  border-bottom-left-radius: 15px;
-  border-top-left-radius: 15px;
-  border: 2px solid #ff9736;
-  cursor: pointer;
-}
-#imgfiltro{
-  width: 25px;
-  height: 23px;
-  position: absolute;
-  left: 65px;
-  top: 3px;
-}
-/*logo abaixo sao configuraçoes de outro style CSS que um integrante antigo criou para mesma pagina de historico*/
+
 #navbarNav{
   background-color: #1D3273;
 }
@@ -117,6 +97,98 @@ tr {
   position: absolute;
   left: 840px;
   top: 105px;
-  color: #eaedef;
+  color: #feffff;
   font-family: Verdana;
+}
+
+
+@media screen and (max-width: 768px) {
+  body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: #e9e9e9;
+  }
+
+  
+  #divprincipal {
+    width: 100%;
+    height: 70px;
+    padding: 10px 15px;
+    box-sizing: border-box;
+    position: relative;
+  }
+
+  #imagsenai {
+    left: auto;
+    right: 15px;
+    top: 12px;
+    height: 40px;
+    width: auto;
+    max-width: 130px;
+  }
+
+  
+  #H1EA {
+    position: static;
+    text-align: center;
+    margin: 15px auto;
+    font-size: 22px;
+    color: #1D3273;
+    display: block;
+    width: 100%;
+  }
+
+  
+  #divbranco {
+    position: static;
+    width: 96%;
+    height: auto;
+    min-height: 400px;
+    margin: 10px auto 30px auto;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 12px;
+  }
+
+  #divazul {
+    position: static;
+    width: 100%;
+    height: auto;
+    min-height: 350px;
+    padding: 15px 8px;
+    box-sizing: border-box;
+    border-radius: 10px;
+  }
+
+  
+  .btn-setor {
+    padding: 8px 12px;
+    font-size: 13px;
+    margin: 4px;
+    border-radius: 6px;
+  }
+
+  
+  table {
+    position: static !important;
+    margin: 15px auto !important;
+    width: 100% !important;
+    display: block !important;
+    overflow-x: auto !important;
+    white-space: nowrap !important;
+    box-sizing: border-box !important;
+    border-radius: 8px !important;
+  }
+
+  th, td {
+    width: auto !important;
+    min-width: 100px !important;
+    padding: 8px 10px !important;
+    font-size: 13px !important;
+  }
+
+  tr {
+    height: 42px !important;
+  }
 }

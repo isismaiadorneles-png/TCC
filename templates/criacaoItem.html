@@ -20,7 +20,6 @@
       </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
-        <!--mudei a cor da navegação da pagina-->
         <li class="nav-item">
           <a class="nav-link" href="/estoque.html" style="color: aliceblue; font-size: 20px; font-family: Verdana;">Estoque</a>
         </li>
@@ -36,64 +35,59 @@
         <li class="nav-item">
           <a class="nav-link" href="/index.html" style="color: aliceblue; font-size: 20px; font-family: Verdana;">Sair</a>
         </li>
-        <!--fim da mudança-->
       </ul>
     </div>
   </div>
  </nav>
-<!--fim da navbar-->
 <div id="divprincipal"></div>
 <img id="imagsenai" src="/static/senai.branco (2).png"> 
-<div style="background-color: #2E529E; width: 1100px; height: 450px; left: 430px; position: absolute; top: 250px; border-radius: 10px; border: 3px solid; border-color: #5B0C6E"></div> <!--cor do quadrado-->
+<div style="background-color: #2E529E; width: 1100px; height: 450px; left: 430px; position: absolute; top: 250px; border-radius: 10px; border: 3px solid; border-color: #5B0C6E"></div>
 
 
 <div>
-    <h1 class="letras" style="position: absolute; left:780px; top: 110px; ">Criar Novo Item</h1> <!--titulo-->
+    <h1 class="letras" style="position: absolute; left:780px; top: 110px; ">Criar Novo Item</h1>
 </div>
 <div>
-    <h1 class="letras" style="position: absolute; left:470px; top: 310px; font-size: 35px;">Nome do item:</h1> <!--palavras para item-->
+    <h1 class="letras" style="position: absolute; left:470px; top: 310px; font-size: 35px;">Nome do item:</h1>
     <h1 class="letras" style="position: absolute; left:470px; top: 437px; font-size: 35px;">Quantidade:</h1>
     <h1 class="letras" style="position: absolute; left:470px; top: 560px; font-size: 35px;">Categoria:</h1>
     <h1 class="letras" style="position: absolute; left:1060px; top: 310px; font-size: 35px;">Estoque:</h1>
     <h1 class="letras" style="position: absolute; left:1060px; top: 560px; font-size: 35px;">Descrição:</h1>
     <h1 class="letras" style="position: absolute; left:1060px; top: 437px; font-size: 35px;">Preço:</h1>
 </div>
-
 <form action="criacaoItem.html" method="POST" enctype="multipart/form-data">
   <div style="margin-left: 750px; margin-top: 0px;">
       <label for="nome"></label>
-      <input id="caixa1" type="text" name="nome" id="nome"placeholder="Digite" required> <!--caixa de texto-->
+      <input id="caixa1" type="text" name="nome" id="nome"placeholder="Digite" required>
   </div>
-
   <div style="margin-left: 700px; margin-top: 0px;">
       <label for="quantidade"></label>
-      <input id="caixa2" type="text" name="quantidade" id="quantidade"placeholder="Digite" required> <!--caixa de texto-->
+      <input id="caixa2" type="text" name="quantidade" id="quantidade"placeholder="Digite" required>
   </div>
 
   <div style="margin-left: 670px; margin-top: 0px;">
       <label for="categoria"></label>
-      <input id="caixa3" type="text" name="categoria" id="categoria"placeholder="Digite" required> <!--caixa de texto-->
+      <input id="caixa3" type="text" name="categoria" id="categoria"placeholder="Digite" required>
   </div>
-
+  
   <div style="margin-left: 1230px; margin-top: 0px;">
        <label for="estoque_minimo"></label>
-       <input id="caixa4" type="text" name="estoque_minimo" id="estoque_minimo"placeholder="Digite" required> <!--caixa de texto-->
+       <input id="caixa4" type="text" name="estoque_minimo" id="estoque_minimo"placeholder="Digite" required>
   </div>
 
   <div style="margin-left: 1260px; margin-top: 0px;">
        <label for="descrição"></label>
-      <input id="caixa5" type="text" name="descrição" id="descrição"placeholder="Digite" required> <!--caixa de texto-->
+      <input id="caixa5" type="text" name="descrição" id="descrição"placeholder="Digite" required>
   </div>
 
   <div style="margin-left: 1180px; margin-top: 0px;">
        <label for="preço"></label>
-       <input id="caixa6" type="text" name="preço" id="preço"placeholder="Digite" required> <!--caixa de texto-->
+       <input id="caixa6" type="text" name="preço" id="preço"placeholder="Digite" required>
   </div>
 
   <div class="upload-container">
     <input id="but7" type="file" name="imagem" accept="image/*" placeholder="Imagem">
-  
-  <button id="botaoconcluir", class="btn btn-primary",  type="submit">CONCLUIR</button> <!--botao de concluir-->
+  <button id="botaoconcluir", class="btn btn-primary",  type="submit">CONCLUIR</button>
 </form>
 
 </body>

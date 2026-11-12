@@ -4,19 +4,18 @@
   height: 130px;
   background-color: rgba(0, 92, 170, 1);
 }
-/*criação de item*/
+
 .letras{
     font-family:Verdana ;
     color:#eaedef ;
 }
 #input{
-    width: 40%;       /* Largura total da div pai */
-    height: 40px;      /* Aumenta a altura */
-    font-size: 20px;   /* Aumenta o tamanho da fonte interna */
-    padding: 10px;     /* Espaçamento interno para melhorar aparência*/
+    width: 40%;       
+    height: 40px;      
+    font-size: 20px;   
+    padding: 10px;     
 }
 
-/*caixa de texto*/
 #caixa1{
 position:absolute;
 top: 310px;
@@ -60,7 +59,7 @@ border-radius: 10px;
   border-radius: 10px;
 }
 
-/*cor do botao*/
+
 #botaoconcluir {
     width: 450px;
     height: 90px;
@@ -105,4 +104,84 @@ border-radius: 10px;
 
 #formulario{
   max-height: 100px;
+}
+
+#but7{
+   position: absolute;
+   left: 800px;
+   top: 650px;
+}
+
+
+@media screen and (max-width: 768px) {
+  body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: #f4f6f9;
+  }
+
+  /* Cabeçalho */
+  #divprincipal {
+    width: 100%;
+    height: 70px;
+    padding: 10px 15px;
+    box-sizing: border-box;
+    position: relative;
+  }
+
+  #imagsenai {
+    left: auto;
+    right: 15px;
+    top: 12px;
+    height: 40px;
+    width: auto;
+    max-width: 130px;
+  }
+
+  
+  #formulario {
+    max-height: none !important;
+    width: 92% !important;
+    max-width: 400px !important;
+    margin: 20px auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    box-sizing: border-box !important;
+  }
+
+  
+  #caixa1, #caixa2, #caixa3, #caixa4, #caixa5, #caixa6 {
+    position: static !important;
+    width: 100% !important;
+    height: 48px !important;
+    margin: 0 0 15px 0 !important;
+    box-sizing: border-box !important;
+    border-radius: 8px !important;
+    padding: 0 12px !important;
+    font-size: 15px !important;
+    display: block !important;
+  }
+
+  
+  #botaoconcluir, #botaoconcluir:hover {
+    position: static !important;
+    left: auto !important;
+    top: auto !important;
+    width: 100% !important;
+    height: 52px !important;
+    font-size: 18px !important;
+    margin: 15px auto 30px auto !important;
+    display: block !important;
+    scale: 1 !important;
+  }
+
+  #but7 {
+    position: static !important;
+    left: auto !important;
+    top: auto !important;
+    width: 100% !important;
+    margin: 10px auto !important;
+    display: block !important;
+  }
 }

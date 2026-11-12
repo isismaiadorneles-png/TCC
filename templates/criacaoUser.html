@@ -11,36 +11,38 @@
 </head>
 <body style="background-color: rgba(19, 43, 121, 1);">
 
-    <div id="divprincipal"> <!--aqui é o cabeçalho-->
+    <div id="divprincipal">
      <h1 class="letras" style="position: absolute; left:710px; top: 50px; ">Novo funcionario</h1> 
      <a href="/login.html">
       <button id="botaoconcluir"   style="position: absolute;top: 50px; left: 50px; width: 100px; height: 40px;"  type="submit" >Voltar</button>
      </a>
         <img id="imagesenai" src="../static/senai.branco (2).png">  
-      </div><!--fim do cabeçalho-->
-    
+      </div>
     <div>
 <div>
     <h1 class="letras" style="position: absolute; left:710px; top: 280px;">Nome:</h1> 
     <h1 class="letras" style="position: absolute; left:710px; top: 390px;">Função:</h1>
     <h1 class="letras" style="position: absolute; left:710px; top: 510px;">Senha:</h1>
 <form action="criacaoUser.html" method="POST" enctype="multipart/form-data">
-<div style="margin-left: 710px;"><!--aqui campo do nome-->
+<div style="margin-left: 710px;">
     <label for="nome"></label>
     <input id="caixa1" type="text" name="nome" placeholder="Digite o nome do usuario" required>
 </div>
-<div style="margin-left: 710px;"><!--aqui campo do tipo de useer(adm ou user)-->
+<div style="margin-left: 710px;">
     <label for="tipo"></label>
     <select id="caixa2" name="tipo" required>
         <option value="usuario">Usuário</option>
         <option value="admin">Administrador</option>
     </select>
 </div>
-<div style="margin-left: 710px;"><!--aqui campo da senha-->
+<div style="margin-left: 710px;">
     <label for="senha"></label>
     <input id="caixa3" type="password" name="senha" placeholder="Digite a senha" required>
 </div>
-    <button id="botaoconcluir" style="position: absolute;top: 680px; left: 710px; width: 430px; height: 40px;"  type="submit" >concluir</button>
+    <button id="botaoconcluir" style="position: absolute;top: 680px; left: 710px; width: 430px; height: 40px;"  type="submit" >Concluir</button>
+    <a href="/tabela.html" id="VerUser",class="btn-setor" style="position: absolute;top: 750px; left: 825px; width: 430px; height: 40px;">
+        Ver Usuários Cadastrados
+    </a>
 </form>    
 </body>
 </html>

@@ -1,110 +1,86 @@
-import { StatusBar } from "expo-status-bar";
-import { useState } from "react";
+import React, { useRef, useState, useEffect } from 'react';
 import {
   StyleSheet,
-  Text,
   View,
-  TextInput,
+  ActivityIndicator,
+  Text,
   TouchableOpacity,
-  ScrollView,
-} from "react-native";
-import axios from "axios";
+  BackHandler,
+  Platform,
+} from 'react-native';
+import { StatusBar } from 'expo-status-bar';
+import { WebView } from 'react-native-webview';
 
-const GROQ_API_KEY = "";
+
+const API_URL = 'http://192.168.148.160:5000';
 
 export default function App() {
-  const [ingredientes, setIngredientes] = useState("");
-  const [receita, setReceita] = useState("");
+  const webViewRef = useRef(null);
+  const [canGoBack, setCanGoBack] = useState(false);
+  const [hasError, setHasError] = useState(false);
 
-  const api = axios.create({
-    baseURL: "https://api.groq.com/openai/v1/",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${GROQ_API_KEY}`,
-    },
-  });
+  
+  useEffect(() => {
+    if (Platform.OS === 'android') {
+      const onBackPress = () => {
+        if (canGoBack && webViewRef.current) {
+          webViewRef.current.goBack();
+          return true;
+        }
+        return false;
+      };
 
-  async function gerarReceita() {
-    try {
-      const resposta = await api.post("chat/completions", {
-        model: "openai/gpt-oss-20b",
-        temperature: 1,
-        max_tokens: 1024,
-        messages: [
-          {
-            role: "system",
-            content: `Você é um chef de cozinha muito criativo. Crie receitas deliciosas com que eu preciso. Responda em Português Brasil.
-          🍽️ [NOME DA RECEITA EM MAIÚSCULO]
-          ⏱️ Tempo: [tempo de preparo]
-          👥 Porções: [quantidade]
-          🧾 INGREDIENTES:
-          - [Ingrediente 1]
-          - [Ingrediente 2]
-          👨‍🍳 MODO DE PREPARO:
-          1. [passo 1]
-          2. [passo 2]
-          💡 DICA: [uma dica especial sobre a receita]`,
-          },
-          {
-            role: "user",
-            content: `Crie uma receita com esses Ingredientes: ${ingredientes}`,
-          },
-        ],
-      });
+      const subscription = BackHandler.addEventListener('hardwareBackPress', onBackPress);
 
-      console.log("Resposta da API:", resposta.data);
-      setReceita(
-        resposta.data.choices[0].message?.content ||
-          "Não foi possível gerar a receita.",
-      );
-    } catch (error) {
-      console.error(
-        "Erro ao gerar receita:",
-        error.response?.data || error.message,
-      );
+      return () => {
+        if (subscription && typeof subscription.remove === 'function') {
+          subscription.remove();
+        }
+      };
     }
-  }
+  }, [canGoBack]);
 
   return (
     <View style={styles.container}>
-      <StatusBar style="light" />
+      <StatusBar style="dark" />
 
-      <View style={styles.header}>
-        <Text style={styles.emoji}>🧑‍🍳</Text>
-        <Text style={styles.title}>Chef IA</Text>
-        <Text style={styles.subTitle}>Digite seus Ingredientes</Text>
-      </View>
-
-      <TextInput
-        style={styles.input}
-        placeholder="Ex: Frango, arroz, tomate, cebola..."
-        multiline
-        placeholderTextColor="#888"
-        value={ingredientes}
-        onChangeText={setIngredientes}
-      />
-
-      <TouchableOpacity style={styles.button} onPress={gerarReceita}>
-        <Text style={styles.buttonTxt}>Gerar Receitas</Text>
-      </TouchableOpacity>
-
-      {receita ? (
-        <View style={styles.receitaWrapper}>
-          <View style={styles.receitaHeader}>
-            <Text style={styles.receitaHeaderText}>Sua Receita</Text>
-          </View>
-
-          <ScrollView style={styles.receitaContainer}>
-            <Text style={styles.receita}>{receita}</Text>
-          </ScrollView>
+      {hasError ? (
+        <View style={styles.errorContainer}>
+          <Text style={styles.errorEmoji}>📦</Text>
+          <Text style={styles.errorTitle}>Sistema de Almoxarifado</Text>
+          <Text style={styles.errorSubtitle}>
+            Não foi possível conectar ao servidor.{'\n\n'}
+            Verifique se o backend Flask está rodando no computador (python app.py) e se ambos estão conectados no mesmo Wi-Fi.
+          </Text>
+          <TouchableOpacity
+            style={styles.retryButton}
+            onPress={() => {
+              setHasError(false);
+              webViewRef.current?.reload();
+            }}
+          >
+            <Text style={styles.retryButtonText}>Tentar Novamente</Text>
+          </TouchableOpacity>
         </View>
       ) : (
-        <View style={styles.placeholderContainer}>
-          <Text style={styles.placeholderEmoji}>🍲</Text>
-          <Text style={styles.placeholderText}>
-            Sua Receita aparecerá aqui!
-          </Text>
-        </View>
+        <WebView
+          ref={webViewRef}
+          source={{ uri: SERVER_URL }}
+          style={styles.webview}
+          startInLoadingState={true}
+          showsVerticalScrollIndicator={false}
+          pullToRefreshEnabled={true}
+          renderLoading={() => (
+            <View style={styles.loadingContainer}>
+              <ActivityIndicator size="large" color="#0984e3" />
+              <Text style={styles.loadingText}>Carregando Almoxarifado...</Text>
+            </View>
+          )}
+          onError={() => setHasError(true)}
+          onNavigationStateChange={(navState) => setCanGoBack(navState.canGoBack)}
+          javaScriptEnabled={true}
+          domStorageEnabled={true}
+        />
       )}
     </View>
   );
@@ -113,90 +89,57 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#1a1a2e",
-    paddingHorizontal: 20,
+    backgroundColor: '#ffffff',
+    paddingTop: Platform.OS === 'android' ? 35 : 0,
   },
-  header: {
-    alignItems: "center",
-    paddingTop: 60,
-    paddingBottom: 20,
+  webview: {
+    flex: 1,
   },
-  emoji: {
-    fontSize: 50,
+  loadingContainer: {
+    ...StyleSheet.absoluteFillObject,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#ffffff',
+  },
+  loadingText: {
+    marginTop: 15,
+    fontSize: 16,
+    color: '#636e72',
+  },
+  errorContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    paddingHorizontal: 30,
+    backgroundColor: '#ffffff',
+  },
+  errorEmoji: {
+    fontSize: 55,
+    marginBottom: 15,
+  },
+  errorTitle: {
+    fontSize: 22,
+    fontWeight: 'bold',
+    color: '#2d3436',
+    textAlign: 'center',
     marginBottom: 10,
   },
-  title: {
-    fontSize: 32,
-    marginBottom: 10,
-    color: "#ffffff",
-    fontWeight: "bold",
-  },
-  subTitle: {
+  errorSubtitle: {
     fontSize: 14,
-    color: "#888",
-    marginTop: 5,
+    color: '#636e72',
+    textAlign: 'center',
+    marginBottom: 25,
+    lineHeight: 22,
   },
-  input: {
-    backgroundColor: "#2d2d44",
-    borderRadius: 15,
-    padding: 15,
+  retryButton: {
+    backgroundColor: '#0984e3',
+    paddingVertical: 14,
+    paddingHorizontal: 28,
+    borderRadius: 8,
+  },
+  retryButtonText: {
+    color: '#ffffff',
     fontSize: 16,
-    color: "#fff",
-    minHeight: 80,
-    textAlignVertical: "top",
-    marginBottom: 15,
-  },
-  button: {
-    backgroundColor: "#e17055",
-    paddingVertical: 16,
-    borderRadius: 15,
-    alignItems: "center",
-    marginBottom: 15,
-  },
-  buttonTxt: {
-    color: "#fff",
-    fontSize: 16,
-    fontWeight: "bold",
-  },
-  receitaWrapper: {
-    flex: 1,
-    marginBottom: 30,
-    borderRadius: 20,
-    overflow: "hidden",
-    backgroundColor: "#2d2d44",
-  },
-  receitaHeader: {
-    backgroundColor: "#e17055",
-    paddingVertical: 12,
-    paddingHorizontal: 15,
-  },
-  receitaHeaderText: {
-    color: "#fff",
-    fontSize: 16,
-    fontWeight: "bold",
-    textAlign: "center",
-  },
-  receitaContainer: {
-    flex: 1,
-    padding: 20,
-  },
-  receita: {
-    color: "#fff",
-    fontSize: 16,
-    lineHeight: 26,
-  },
-  placeholderContainer: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  placeholderEmoji: {
-    fontSize: 60,
-    marginBottom: 15,
-  },
-  placeholderText: {
-    color: "#666",
-    fontSize: 16,
-    textAlign: "center",
+    fontWeight: 'bold',
   },
 });

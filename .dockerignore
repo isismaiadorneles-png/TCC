@@ -1,0 +1,12 @@
+mobile/
+.vscode/
+.git/
+venv/
+.venv/
+__pycache__/
+*.pyc
+*.txt
+!requirements.txt
+bkp_almox.sql
+init.sql
+README.md
